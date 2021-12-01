@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-9">
+        <h1>Your Events Are</h1>
+
+        <!-- <div *ngFor="let t of events">
+            <input type="text" [(ngModel)]="t.eventname" class="form-control">
+            <input type="date" [(ngModel)]="t.eventdate" class="form-control">
+
+            <button class="btn btn-success" (click)="edit()">Edit</button>
+            <button class="btn btn-danger" (click)="delete()">Delete</button>
+        </div> -->
+        <!-- [disabled]="r.isDisabled" -->
+
+        <div *ngFor="let r of events;let i=index" style="margin-bottom: 20px;">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label  class="col-form-label">Event</label>
+                </div>
+                <div class="col-auto">
+                    <!-- <h1>{{r.event}}</h1> -->
+                  <input type="text"  class="form-control"  [disabled]="r.isDisabled"   [(ngModel)]="r.eventname">
+                </div>
+                <div class="col-auto" style="margin-left: 50px;">
+                    <label class="col-form-label">Date</label>
+                  </div>
+                <div class="col-auto">
+                    <input type="date" class="form-control"  [disabled]="r.isDisabled"   [(ngModel)]="r.eventdate">
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-warning"  (click)="edit(i)" *ngIf="btn1" style="margin-right: 10px;">
+                   Edit
+                    </button>
+                    <button class="btn btn-danger" (click)="delete(i)" *ngIf="btn2"  style="margin-right: 10px;">
+                        Delete
+                    </button>
+                    <button class="btn btn-success" *ngIf="btn3"   style="margin-right: 10px;" (click)="editevent(i)">
+                        OK
+                    </button>
+                    <button class="btn btn-danger" *ngIf="btn4"  style="margin-right: 10px;" (click)="cancelevent(i)">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+<br>
+
+
+
+    </div>
+    <div class="col-1"></div>
+</div>

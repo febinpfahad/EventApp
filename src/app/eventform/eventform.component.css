@@ -1,0 +1,15 @@
+ul li{
+    display:list-item;
+}
+.mr{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    background-color: gray;
+    height: 800px;
+}
+.dl{
+    margin-top: 80px;
+}
+.tt{
+    margin-top: 50px;
+}
